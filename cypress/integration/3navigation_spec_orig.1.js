@@ -1,13 +1,13 @@
 describe('Navigation Tests', function(){
     before(function(){
-        cy.visit('/login.op')
+        cy.visit('/slm/login.op')
          .get('#j_username').type('admin@sales.acme.com').should("have.value", "admin@sales.acme.com")
          .get('#j_password').type('p@ssw0rd').should("have.value", "p@ssw0rd")
          .get('#login-button').click()
     })
 
     it('navigates to Iteration Status page', function(){
-        cy.visit('/#/20330408691d/iterationstatus')
+        cy.visit('/#/196025249156d/iterationstatus')
           .url().should('include','/iterationstatus')
     })
 

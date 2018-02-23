@@ -8,7 +8,7 @@ describe('Navigation Tests', function(){
     })
 
     it('navigates to Iteration Status page', function(){
-        cy.visit('/#/197492077288d/iterationstatus')
+        cy.visit('https://rally1.rallydev.com/#/196025249156d/iterationstatus')
           .url().should('include','/iterationstatus')
     })
 
