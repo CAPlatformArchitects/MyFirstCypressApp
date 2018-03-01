@@ -1,7 +1,6 @@
-describe('Navigation Tests', function(){
-   //Why do you need the before here?
+describe('Add Custom Page', function(){
    before(function(){
-        cy.visit('https://rally1.rallydev.com/')
+    cy.visit('/slm/login.op')
          .get('#j_username').type('admin@sales.acme.com').should("have.value", "admin@sales.acme.com")
          .get('#j_password').type('p@ssw0rd').should("have.value", "p@ssw0rd")
          .get('#login-button').click()
