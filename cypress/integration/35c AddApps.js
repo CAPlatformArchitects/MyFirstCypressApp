@@ -8,28 +8,25 @@
 
 describe('Add Apps', function(){
     before(function(){
-        cy.visit('/slm/login.op')
+        cy.visit('/slm/login.op', { timeout: 20000 })
           .get('#j_username').type('testme@acme.com').should("have.value", "testme@acme.com")
           .get('#j_password').type('testme33').should("have.value", "testme33")
           .get('#login-button').click()
-        cy.wait(5000)
+          .wait(20000)
         });
     
     it('open side nav bar', function(){
         cy.get('.chr-NavigationHeader-menuButtonTitleDiv').click()
-        cy.wait(5000)
         });
 
     it('open page options', function(){
         cy.get('.chr-NavigationSidebarPagesHeader-ellipsisButton').click()
-        cy.wait(5000)
         });
       
     it('find custom page', function(){
         //TODO custom page title substitution
         //get the custom page tile title <substitute> for "Home" page section
         cy.get('a.chr-NavigationPageTileLink:contains("CustomPage1")').click()
-        cy.wait(5000)
         });
 
     it('set col spec', function(){
@@ -49,11 +46,25 @@ describe('Add Apps', function(){
         //cy.get('div.chr-Page.chr-Dashboard > span.smb-Icon.smb-Icon--gear')
      //   cy.get('span.smb-Icon.smb-Icon--gear').click({ multiple: true })
      //   cy.get("span.smb-DropdownItem-text:contains('Add App')").click()
+        cy.get('span.smb-Icon.smb-Icon--grid').click()
         cy.get('div.chr-AppTitle-title:contains("Blocked Work")')
+        cy.get('.smb-TableRow')
+        cy.get('button.smb-Button.smb-Button--primary.smb-Button--sm.chr-AppAddButton')
 
+
+// /div[11]/div/div[2]/div/div/div[2]/div/div[3]/table/tbody/tr[3]/td[4]/button/div/span
 
         //to view grid:  smb-Icon smb-Icon--grid
         //"<div class="chr-AppTitle-title">Blocked Work</div>"
+
+
+      //  "<div class="chr-AppTile"><div class="chr-AppTile-contentWrapper"><img class="chr-AppTile-previewImage" src="/slm/js/rally/ui/dashboard/panels/blockinghistory/preview.png" alt=""><div class="chr-AppTitle-titleBar"><div class="chr-AppTitle-title">Blocking History</div><div class="smb-PopoverTrigger"><div><span class="smb-Label smb-Label--default chr-Badge chr-Badge--blue">Core</span></div><!-- react-empty: 38584 --></div></div><div class="chr-AppTile-description">See when User Stories and Tasks were blocked and/or unblocked.</div></div><div class="smb-Grid smb-Grid--fluid chr-AppTile-details"><div class="smb-Row"><div class="smb-Col smb-Col--md10"><button class="smb-Button smb-Button--primary smb-Button--sm chr-AppAddButton" role="button" type="button"><div class="smb-Button-contents"><span class="smb-Button-children">Add</span></div></button></div><div class="smb-Col smb-Col--md2"><div class="chr-GithubLink"><div class="smb-PopoverTrigger"><div><button class="smb-Button smb-Button--link smb-Button--sm" role="button" type="button"><div class="smb-Button-contents"><span class="smb-Button-children"><span class="chr-GithubLink-octocat"></span><span>GitHub</span></span></div></button></div><!-- react-empty: 41828 --></div></div></div></div></div></div>"
+
+     //  [info] Executing: | clickAt | css=button.smb-Button.smb-Button--primary.smb-Button--sm.chr-AppAddButton > div.smb-Button-contents > span.smb-Button-children | 12,5 |
+
+
+
+
 
         });      
 });
