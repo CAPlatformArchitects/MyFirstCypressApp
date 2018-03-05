@@ -46,10 +46,17 @@ describe('Add Apps', function(){
         //cy.get('div.chr-Page.chr-Dashboard > span.smb-Icon.smb-Icon--gear')
      //   cy.get('span.smb-Icon.smb-Icon--gear').click({ multiple: true })
      //   cy.get("span.smb-DropdownItem-text:contains('Add App')").click()
+     //cy.get('button.smb-Button.smb-Button--icon.smb-Button--lg > div.smb-Button-contents > span.smb-Button-icon > span.smb-Icon.smb-Icon--gear').click()
+
         cy.get('span.smb-Icon.smb-Icon--grid').click()
+        
         cy.get('div.chr-AppTitle-title:contains("Blocked Work")')
-        cy.get('.smb-TableRow')
+        cy.get('tr.smb-TableRow:contains("Blocked Work")')
         cy.get('button.smb-Button.smb-Button--primary.smb-Button--sm.chr-AppAddButton')
+
+
+        
+        // cy.get('tr.smb-TableRow:contains("Blocked Work") > > > > button.smb-Button.smb-Button--primary.smb-Button--sm.chr-AppAddButton')
 
 
 // /div[11]/div/div[2]/div/div/div[2]/div/div[3]/table/tbody/tr[3]/td[4]/button/div/span
