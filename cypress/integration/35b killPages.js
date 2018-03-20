@@ -55,26 +55,9 @@
         "Task Board"//Task Board
         ];
       
-    PageSecLen = PageSec.length;
-    for (i = 0; i < PageSecLen; i++) {
-      //Add Custom Page
-      cy.visit(`/slm/wt/new.sp?projectScopeUp=false&projectScopeDown=true&pid=${PageSec[i]}`)
-      cy.log(`the value of ${i} and the value of endurl is ${PageSec[i]}`)
-      //Name Custom Page
-      cy.log(`the value of ${i} and the value of endurl is ${PageName[i]}`)
-      cy.get('input#name').type(`${PageName[i]}`)
-      cy.get('input#sharedWithAllProjects').click()
-      cy.get('input#no_scope_radio').click()//IFF no flags set (DEFAULT)
-      cy.get('input#iteration_scope_radio')//.click()//IFF flag set for iteration scope
-      cy.get('input#release_radio')//.click()//IFF flag set for release scope
-      cy.get('input#milestone_radio')//.click()//IFF flag set for milestone scope
-      cy.get('button#save_and_close_btn.ed-btn-wide').click()
-      };
-//set initial visit to home page
-      cy.visit('/slm/')
-      cy.wait(10000)
+    
 
-//add apps here
+//kill apps here
 PageNameAppLen = PageNameApp.length;
     for (i = 0; i < PageNameAppLen; i++) {
       cy.visit('/slm/')

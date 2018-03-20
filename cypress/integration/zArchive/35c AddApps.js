@@ -66,21 +66,18 @@ describe('Add Apps', function(){
 
        // cy.get('div.smb-Grid.smb-Grid--fluid.chr-AppCatalog-filters > div.smb-Row > div.smb-Col.smb-Col--md4 > label.smb-FieldLabel > span.smb-FieldLabel-text:contains("SEARCH")') 
 
+       //this finds the search label, but I really need to find the search type area associated with this label.
         cy.get("div.smb-Grid.smb-Grid--fluid.chr-AppCatalog-filters > div.smb-Row > div.smb-Col.smb-Col--md4 > label.smb-FieldLabel > span.smb-FieldLabel-text:contains('Search')") 
 
         cy.get('span.smb-FieldLabel-text')
 
         cy.get("span.smb-FieldLabel-text:contains('Search')")
-
-
         cy.get('div.smb-Validated.smb-SearchInput > div.smb-TextInput.smb-TextInput--iconPlacementStart.smb-TextInput--hasClearButton.smb-TextInput--hasIcon.smb-TextInput--sm.is-empty.smb-SearchInput')
-     
+     //need to combine the above two lines in order to type into the proper search dialog box.
 
        // cy.get('div.smb-Grid.smb-Grid--fluid.chr-AppCatalog-filters > div.smb-Row > div.smb-Col.smb-Col--md4 > div.smb-Validated.smb-SearchInput > div.smb-TextInput.smb-TextInput--iconPlacementStart.smb-TextInput--hasClearButton.smb-TextInput--hasIcon.smb-TextInput--sm.is-empty.smb-SearchInput')
 
-     
-     
-     
+          
         //  cy.get('div.smb-TextInput.smb-TextInput--iconPlacementStart.smb-TextInput--hasClearButton.smb-TextInput--hasIcon.smb-TextInput--sm.is-focused.smb-SearchInput > input.smb-TextInput-input')
      //   div.
      // div.smb-TextInput.smb-TextInput--iconPlacementStart.smb-TextInput--hasClearButton.smb-TextInput--hasIcon.smb-TextInput--sm.is-focused.smb-SearchInput > input.smb-TextInput-input

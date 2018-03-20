@@ -1,5 +1,7 @@
 {
   "projectId": "xps3h9",
-  "baseUrl": "https://us1.rallydev.com"
+  "baseUrl": "https://us1.rallydev.com",
+  "defaultCommandTimeout": 45000,
+  "env":{"CYPRESS_RECORD_KEY":"04aee689-1dbc-4a5c-87d0-422ab5b8f584"}
 }
 
