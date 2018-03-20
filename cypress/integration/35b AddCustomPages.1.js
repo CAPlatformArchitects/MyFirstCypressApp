@@ -51,13 +51,34 @@
 
         //Home
     it('adds a custom page', function(){
+
+
+//var endurl = "myhome";
+//cy.log(`My name is ${endurl}`);
+// My name is javascript
+
+var endurl, fLen, i;
+endurl = ["myhome", "backlogandschedules"];
+fLen = endurl.length;
+  for (i = 0; i < fLen; i++) {
+      cy.visit('/slm/wt/new.sp?projectScopeUp=false&projectScopeDown=true&pid=${endurl}')
+      cy.log(`My name is ${endurl[i]}`)
+        .get('input#name').type('CustomPage1')
+        .get('input#sharedWithAllProjects').click()
+        .get('button#save_and_close_btn.ed-btn-wide').click()
+        cy.log(`the value of ${i} and the value of endurl is ${endurl[i]}`)
+
+    }
+
+
+
         cy.visit('/slm/wt/new.sp?projectScopeUp=false&projectScopeDown=true&pid=myhome').pause()
         .get('input#name').type('CustomPage1')
         .get('input#sharedWithAllProjects').click()
         .get('button#save_and_close_btn.ed-btn-wide').click()
 
         //Plan
-        .visit('/slm/wt/new.sp?projectScopeUp=false&projectScopeDown=true&pid=backlogandschedules')
+        .visit('/slm/wt/new.sp?projectScopeUp=false&projectScopeDown=true&pid=backlogandschedules').pause()
         .get('input#name').type('CustomPage2')
         .get('input#sharedWithAllProjects').click()
         .get('button#save_and_close_btn.ed-btn-wide').click()

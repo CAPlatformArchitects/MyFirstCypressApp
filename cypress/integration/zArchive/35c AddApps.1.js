@@ -55,6 +55,62 @@ describe('Add Apps', function(){
         cy.get('button.smb-Button.smb-Button--primary.smb-Button--sm.chr-AppAddButton')
 
 
+        //3/9:3:30 Tried this code as a workaround for add button
+          cy.log('OK, get ready, does it see this, now this is it?')
+
+        cy.get('tr.smb-TableRow')
+        cy.get('td.smb-TableCell.u-textLeft')
+        cy.get('button.smb-Button.smb-Button--primary.smb-Button--sm.chr-AppAddButton')
+        cy.get('div.smb-Button-contents')
+        cy.get('tr.smb-TableRow > td.smb-TableCell.u-textLeft > button.smb-Button.smb-Button--primary.smb-Button--sm.chr-AppAddButton > div.smb-Button-contents')
+
+        cy.get('tr.smb-TableRow:contains("Blocked Work") > td.smb-TableCell.u-textLeft > button.smb-Button.smb-Button--primary.smb-Button--sm.chr-AppAddButton > div.smb-Button-contents > span.smb-Button-children').click()
+          
+      
+          
+      
+
+          
+    //-->      cy.get('div.smb-Grid.smb-Grid--fluid.chr-AppCatalog-filters')
+
+       //   cy.get('div.smb-Grid.smb-Grid--fluid.chr-AppCatalog-filters > div.smb-Col.smb-Col--md4') 
+
+    //-->    cy.get('div.smb-Grid.smb-Grid--fluid.chr-AppCatalog-filters > div.smb-Row > div.smb-Col.smb-Col--md4')
+
+       // cy.get('div.smb-Grid.smb-Grid--fluid.chr-AppCatalog-filters > div.smb-Row > div.smb-Col.smb-Col--md4 > label.smb-FieldLabel > span.smb-FieldLabel-text:contains("SEARCH")') 
+
+    //-->    cy.get("div.smb-Grid.smb-Grid--fluid.chr-AppCatalog-filters > div.smb-Row > div.smb-Col.smb-Col--md4 > label.smb-FieldLabel > span.smb-FieldLabel-text:contains('Search')") 
+
+    //-->    cy.get('span.smb-FieldLabel-text')
+
+    //-->    cy.get("span.smb-FieldLabel-text:contains('Search')")
+
+
+    //-->    cy.get('div.smb-Validated.smb-SearchInput > div.smb-TextInput.smb-TextInput--iconPlacementStart.smb-TextInput--hasClearButton.smb-TextInput--hasIcon.smb-TextInput--sm.is-empty.smb-SearchInput')
+     
+
+       // cy.get('div.smb-Grid.smb-Grid--fluid.chr-AppCatalog-filters > div.smb-Row > div.smb-Col.smb-Col--md4 > div.smb-Validated.smb-SearchInput > div.smb-TextInput.smb-TextInput--iconPlacementStart.smb-TextInput--hasClearButton.smb-TextInput--hasIcon.smb-TextInput--sm.is-empty.smb-SearchInput')
+
+     
+     
+     
+        //  cy.get('div.smb-TextInput.smb-TextInput--iconPlacementStart.smb-TextInput--hasClearButton.smb-TextInput--hasIcon.smb-TextInput--sm.is-focused.smb-SearchInput > input.smb-TextInput-input')
+     //   div.
+     // div.smb-TextInput.smb-TextInput--iconPlacementStart.smb-TextInput--hasClearButton.smb-TextInput--hasIcon.smb-TextInput--sm.is-focused.smb-SearchInput > input.smb-TextInput-input
+
+     //   click here: css=div.smb-TextInput.smb-TextInput--iconPlacementStart.smb-TextInput--hasClearButton.smb-TextInput--hasIcon.smb-TextInput--sm.is-empty.is-focused.smb-SearchInput > input.smb-TextInput-input
+    //    type here: css=div.smb-TextInput.smb-TextInput--iconPlacementStart.smb-TextInput--hasClearButton.smb-TextInput--hasIcon.smb-TextInput--sm.is-focused.smb-SearchInput > input.smb-TextInput-input
+    //  hit add button here:  css=button.smb-Button.smb-Button--primary.smb-Button--sm.chr-AppAddButton > div.smb-Button-contents > span.smb-Button-children
+
+
+
+        //.type('Blocked Work').should("have.value", "Blocked Work")
+
+        //cy.get('input.smb-TextInput-input').type('Blocked Work').should("have.value", "Blocked Work")
+    //-->    cy.get('button.smb-Button.smb-Button--primary.smb-Button--sm.chr-AppAddButton')
+
+
+
         
         // cy.get('tr.smb-TableRow:contains("Blocked Work") > > > > button.smb-Button.smb-Button--primary.smb-Button--sm.chr-AppAddButton')
 
